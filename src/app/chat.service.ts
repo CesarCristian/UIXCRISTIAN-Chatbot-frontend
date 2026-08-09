@@ -11,7 +11,7 @@ export interface ChatResponse {
   providedIn: 'root'
 })
 export class ChatService {
-  private readonly apiUrl = 'http://localhost:3000/api/chat';
+  private readonly apiUrl = 'https://uixcristian-chatbot-backend.onrender.com/api/chat';
 
   constructor(private http: HttpClient) {}
 
