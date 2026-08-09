@@ -75,11 +75,13 @@ export class App {
       const saved = localStorage.getItem('ucssito_chat_sessions');
       const savedName = localStorage.getItem('ucssito_teacher_name');
       
-      // If user has already entered their name previously, keep them logged in automatically!
+      // Always show welcome screen on app launch if no name has been entered yet
       if (savedName && savedName.trim().length > 0) {
         this.teacherName = savedName;
         this.showWelcomeScreen.set(false);
       } else {
+        this.teacherName = '';
+        this.welcomeStep.set(1);
         this.showWelcomeScreen.set(true);
       }
 
